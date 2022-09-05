@@ -1,5 +1,6 @@
 package org.example;
 
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -9,11 +10,11 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 public class DBConfig {
-    private String driverClassName = "com.mysql.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost:3306/connectdb?useUnicode=true&characterEncoding=utf8";
+    private String driverClassName = "com.mysql.cj.jdbc.Driver";
+    private String url = "jdbc:mysql://localhost:3307/bbs";
 
-    private String username = "connectuser";
-    private String password = "connect123!@#";
+    private String username = "root";
+    private String password = "kkjjss103@";
 
     @Bean
     public DataSource dataSource() {
@@ -23,6 +24,5 @@ public class DBConfig {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
         return dataSource;
-
     }
 }
