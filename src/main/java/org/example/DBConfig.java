@@ -19,10 +19,16 @@ public class DBConfig {
     @Bean
     public DataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
+
         dataSource.setDriverClassName(driverClassName);
+
         dataSource.setUrl(url);
+
         dataSource.setUsername(username);
+
         dataSource.setPassword(password);
+
         return dataSource;
+
     }
 }
