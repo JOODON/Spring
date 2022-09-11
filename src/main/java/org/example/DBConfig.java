@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 public class DBConfig {
     private String driverClassName = "com.mysql.cj.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost:3307/bbs";
+    private String url = "jdbc:mysql://localhost:3307/role";
 
     private String username = "root";
     private String password = "kkjjss103@";
